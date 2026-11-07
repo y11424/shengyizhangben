@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="生意账本：安卓手机里的生意账。回收专业版与多行业通用版，开单、记账、统计、正规单据与作业台账，数据只存本机。">
+<title>生意账本 · 安卓手机里的生意账</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap bar-inner">
+    <a class="brand" href="#top">生意账本<span>安卓手机里的生意账</span></a>
+    <nav>
+      <a href="#products">版本</a>
+      <a href="#compare">功能对比</a>
+      <a href="#screens">界面</a>
+      <a href="#video">视频</a>
+      <a href="#download">下载</a>
+      <a href="#faq">帮助</a>
+      <a href="#contact">联系</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <p class="eyebrow">安卓 App · 无需注册 · 数据只存本机</p>
+    <h1>一本手机里的生意账</h1>
+    <p class="lead">开单、算钱、记收支、看统计，都在一个 App 里完成。不联网也能用，账本只存在你自己的手机里，不上传服务器。</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#products">选择版本</a>
+      <a class="btn ghost" href="#download">直接下载</a>
+    </div>
+    <ul class="hero-points">
+      <li><strong>不注册</strong>装好就能用</li>
+      <li><strong>不联网</strong>现场断网照常开单</li>
+      <li><strong>不上传</strong>数据只存本机</li>
+      <li><strong>能备份</strong>换机、留底都方便</li>
+    </ul>
+  </section>
+
+  <div id="notice-slot"></div>
+
+  <section id="products" class="wrap section">
+    <h2>两个版本，按需选择</h2>
+    <p class="section-sub">两款都是安卓手机 App，安装包通过迅雷网盘分享。点开链接后按提示下载 APK，覆盖安装不会丢数据。</p>
+    <div id="product-cards" class="cards"></div>
+  </section>
+
+  <section id="compare" class="wrap section">
+    <h2>功能对比</h2>
+    <div class="table-scroll">
+      <table class="compare">
+        <thead><tr><th>功能</th><th>回收专业版</th><th>通用版</th></tr></thead>
+        <tbody>
+          <tr><td>适用业态</td><td>只做回收 / 收购</td><td>回收、零售店、混合经营</td></tr>
+          <tr><td>首次选择经营类型</td><td>—</td><td>✓ 回收 / 零售店 / 通用</td></tr>
+          <tr><td>支出单、收入单开单</td><td>✓</td><td>✓</td></tr>
+          <tr><td>品类价格、库存与预警</td><td>✓</td><td>✓</td></tr>
+          <tr><td>统计、本金、本地备份恢复</td><td>✓</td><td>✓</td></tr>
+          <tr><td>企业对接单与合规信息登记</td><td>✓ 来源、去向、车牌、磅单号等</td><td>—</td></tr>
+          <tr><td>正规回收单 / 出售单（A4）</td><td>✓</td><td>—</td></tr>
+          <tr><td>作业台账与汇总表</td><td>✓ CSV / PDF / XLSX</td><td>—</td></tr>
+          <tr><td>单据带上公司名称抬头</td><td>✓</td><td>—</td></tr>
+          <tr><td>两版备份文件互通</td><td colspan="2" class="center">双向互通，换版本不用重录历史数据</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="hint">拿不准选哪个：只做回收、要和企业对账或报送台账，选专业版；还兼做零售、想自己选经营类型，选通用版。</p>
+  </section>
+
+  <section id="screens" class="wrap section">
+    <h2>界面一览</h2>
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="pro" role="tab">回收专业版</button>
+      <button class="tab" data-tab="lite" role="tab">通用版</button>
+    </div>
+    <div id="gallery-pro" class="gallery"></div>
+    <div id="gallery-lite" class="gallery hidden"></div>
+    <p class="hint">点图片可放大查看。画面中的品类、金额、企业名称均为演示数据。</p>
+  </section>
+
+  <section id="receipt" class="wrap section">
+    <h2>正规单据与作业台账</h2>
+    <div class="receipt-grid">
+      <figure class="receipt-figure">
+        <img src="assets/img/receipt.png" alt="再生资源回收单 A4 样例" loading="lazy">
+        <figcaption>再生资源回收单（A4 第 1 页示例）</figcaption>
+      </figure>
+      <div class="receipt-text">
+        <h3>企业对接单，一键出正规单据</h3>
+        <p>开单时打开「企业对接单」开关，登记来源、去向、转运方、车牌、磅单号、收据号与进出站时间，就能导出 A4 正规回收单 / 出售单，供对账、盖章、归档。</p>
+        <p>台账按「订单 × 品类明细」逐笔展开，可按日期、方向、关键字筛选，导出 CSV、PDF、XLSX 三种格式用于报送与二次统计。</p>
+        <p class="hint">公司名称填好之后，正规单据与台账自动带上抬头，PDF 页脚也统一显示公司名；不填则不印任何抬头。</p>
+        <a class="btn ghost small" href="assets/doc/receipt-sample.pdf" target="_blank" rel="noopener">查看 A4 单据样例 PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="video" class="wrap section">
+    <h2>看视频，更快上手</h2>
+    <div class="video-grid">
+      <div class="video-card">
+        <span class="video-tag">回收专业版</span>
+        <div class="video-frame">
+          <video controls preload="none" playsinline poster="assets/img/pro_home.png">
+            <source src="assets/video/tutorial.mp4" type="video/mp4">
+            您的浏览器不支持视频播放。
+          </video>
+        </div>
+        <p>使用教程 · 从激活到开单、导出、台账</p>
+      </div>
+      <div class="video-card">
+        <span class="video-tag">回收专业版</span>
+        <div class="video-frame">
+          <video controls preload="none" playsinline poster="assets/img/pro_create.png">
+            <source src="assets/video/promo.mp4" type="video/mp4">
+            您的浏览器不支持视频播放。
+          </video>
+        </div>
+        <p>宣传短片 · 快速了解能做什么</p>
+      </div>
+      <div class="video-card">
+        <span class="video-tag">通用版</span>
+        <div class="video-frame">
+          <video controls preload="none" playsinline poster="assets/img/lite_orders.png">
+            <source src="assets/video/general-demo.mp4" type="video/mp4">
+            您的浏览器不支持视频播放。
+          </video>
+        </div>
+        <p>使用演示 · 选经营类型、开单、看账（含讲解）</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" class="wrap section">
+    <h2>下载与安装</h2>
+    <div class="download-strip">
+      <a id="dl-pro" class="btn primary" href="#" target="_blank" rel="noopener">下载回收专业版</a>
+      <a id="dl-general" class="btn ghost" href="#" target="_blank" rel="noopener">下载通用版</a>
+    </div>
+    <div class="steps">
+      <div class="step"><span>1</span><div><strong>下载安装</strong><p>点上方按钮打开迅雷分享页，下载 APK 到安卓手机。若提示「未知来源」，按系统提示允许本次安装即可。</p></div></div>
+      <div class="step"><span>2</span><div><strong>复制设备码</strong><p>打开 App，进入「设置 → 激活与授权」，复制页面上的 16 位设备码发给开发者，拿到授权码后粘贴激活。激活全程离线。</p></div></div>
+      <div class="step"><span>3</span><div><strong>开始开单</strong><p>先填企业档案、录几个常收品类，就可以开单了。两版授权码不通用，请按所购版本索取。</p></div></div>
+    </div>
+    <div class="callout">
+      <strong>已经是老用户？直接覆盖安装</strong>
+      <p>升级不用卸载，原有品类、订单与设置都会保留，授权码继续有效。稳妥起见，升级前先在「设置 → 数据管理」做一次「备份全部数据」。两个版本的备份文件双向互通。</p>
+    </div>
+  </section>
+
+  <section id="changelog" class="wrap section">
+    <h2>版本与更新</h2>
+    <div id="changelog-list"></div>
+    <p class="hint">新版发布后，本页面会同步更新版本号与下载链接；已安装的用户按上面的覆盖安装方式升级即可。</p>
+  </section>
+
+  <section id="docs" class="wrap section">
+    <h2>说明书与资料</h2>
+    <ul id="docs-list" class="doc-list"></ul>
+  </section>
+
+  <section id="faq" class="wrap section">
+    <h2>常见问题</h2>
+    <details><summary>苹果手机能用吗？</summary><p>目前只提供安卓版安装包。iPhone 可以用浏览器打开本页查看介绍、说明书和视频，但开单、记账需要在安卓设备上完成。</p></details>
+    <details><summary>要联网、要注册账号吗？</summary><p>都不需要。数据只存在本机，不上传服务器；激活也是离线完成。</p></details>
+    <details><summary>两个版本的授权码通用吗？</summary><p>不通用。请在索取授权码时说明用的是「回收专业版」还是「通用版」。</p></details>
+    <details><summary>换手机、重装怎么办？</summary><p>先在旧机「备份全部数据」，把备份文件传到新机再「从备份恢复」，或用同 WiFi 分享迁移。授权码与设备码绑定，换机后需要重新取设备码联系开发者换发。</p></details>
+    <details><summary>导出的单据和台账在哪里找？</summary><p>在手机「文件管理」里依次打开：内部存储 → Documents → 生意账本 → 单据 / 台账 / 备份。导出成功后也可以直接用弹出的分享面板发送。</p></details>
+    <details><summary>软件变成只读、不能开单了？</summary><p>一般是试用或更新服务到期。已有数据仍可查看和导出，联系开发者续费后即可继续开单。</p></details>
+  </section>
+
+  <section id="contact" class="wrap section">
+    <h2>联系开发者</h2>
+    <p class="section-sub">咨询版本选择、索取试用码 / 授权码、反馈问题或提优化建议，都可以直接联系。</p>
+    <div class="contact-grid">
+      <div class="contact-item"><span>邮箱</span><strong id="contact-email"></strong><button class="btn tiny" data-copy="email">复制</button></div>
+      <div class="contact-item"><span>微信</span><strong id="contact-wechat"></strong><button class="btn tiny" data-copy="wechat">复制</button></div>
+    </div>
+    <p class="copyright">本软件为独立开发，请尊重他人劳动成果、支持正版；未经授权请勿破解、复制或二次分发。</p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>生意账本 · 回收专业版 / 通用版　｜　仅支持安卓设备</p>
+    <p>资料更新日期：<span id="footer-date"></span>　·　页面内截图、单据与金额均为演示数据</p>
+  </div>
+</footer>
+
+<div id="lightbox" class="lightbox hidden"><img id="lightbox-img" src="" alt="界面截图放大"></div>
+<div id="toast" class="toast" role="status"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
