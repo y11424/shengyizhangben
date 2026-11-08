@@ -60,6 +60,20 @@
       var docs = p.manuals.map(function (m) {
         return '<a href="' + m.file + '" target="_blank" rel="noopener">' + m.label + '</a>';
       }).join('');
+      var local = p.download.mode === 'local' && p.download.local;
+      var mainBtn = local
+        ? '<a class="btn primary" href="' + local.file + '" download="' + local.fileName + '">' +
+            p.download.label + ' · ' + local.size + '</a>'
+        : '<a class="btn primary" href="' + p.download.url + '" target="_blank" rel="noopener">' +
+            p.download.label + '</a>';
+      var backup =
+        '<div class="backup-line">' +
+          '<span>备用下载</span>' +
+          '<a href="' + p.download.url + '" target="_blank" rel="noopener">迅雷网盘</a>' +
+          '<span>提取码 <b>' + p.download.code + '</b></span>' +
+          '<button class="btn tiny" type="button" data-copy="code:' + key + '">复制提取码</button>' +
+          '<button class="btn tiny" type="button" data-copy="share:' + key + '">复制分享文案</button>' +
+        '</div>';
       html +=
         '<article class="card' + featured + '">' +
           '<span class="badge">' + p.badge + '</span>' +
@@ -72,11 +86,9 @@
             '<span>更新日期 <b>' + p.released + '</b></span>' +
             '<span>安卓 APK · 覆盖安装不丢数据</span>' +
           '</div>' +
-          '<div class="card-actions">' +
-            '<a class="btn primary" href="' + p.download.url + '" target="_blank" rel="noopener">' + p.download.label + '</a>' +
-            '<button class="btn" type="button" data-copy="share:' + key + '">复制分享文案</button>' +
-          '</div>' +
-          '<p class="code-line">提取码 <b>' + p.download.code + '</b> <button class="btn tiny" type="button" data-copy="code:' + key + '">复制</button>（链接已带提取码，如提示再填）</p>' +
+          '<div class="card-actions">' + mainBtn + '</div>' +
+          (local ? '<p class="direct-note">安装包就在本站，点击直接下载，不用网盘、不用提取码。</p>' : '') +
+          backup +
           '<div class="doc-links">' + docs + '</div>' +
         '</article>';
     });
@@ -85,11 +97,35 @@
 
   /* ---------------- 下载条 / 联系方式 / 页脚 ---------------- */
   function renderMisc() {
-    $('#dl-pro').href = D.products.pro.download.url;
-    $('#dl-general').href = D.products.general.download.url;
+    [['#dl-pro', 'pro', '下载回收专业版'], ['#dl-general', 'general', '下载通用版']].forEach(function (row) {
+      var a = $(row[0]);
+      var d = D.products[row[1]].download;
+      if (d.mode === 'local' && d.local) {
+        a.href = d.local.file;
+        a.setAttribute('download', d.local.fileName);
+        a.removeAttribute('target');
+        a.textContent = row[2] + ' · ' + d.local.size;
+      } else {
+        a.href = d.url;
+        a.setAttribute('target', '_blank');
+        a.removeAttribute('download');
+        a.textContent = row[2];
+      }
+    });
     $('#contact-email').textContent = D.contact.email;
     $('#contact-wechat').textContent = D.contact.wechat;
     $('#footer-date').textContent = D.site.updatedAt;
+  }
+
+  /* 微信内置浏览器会拦截 APK 下载，只在微信里提示 */
+  function setupWechatTip() {
+    if (!/MicroMessenger/i.test(navigator.userAgent)) return;
+    var sec = $('#download');
+    if (!sec) return;
+    var tip = document.createElement('div');
+    tip.className = 'wechat-tip';
+    tip.innerHTML = '当前是在微信中打开：微信会拦截 APK 下载。请点右上角「…」→「在浏览器打开」，再点下载按钮。';
+    sec.insertBefore(tip, sec.querySelector('.download-strip'));
   }
 
   /* ---------------- 更新日志 ---------------- */
@@ -186,6 +222,7 @@
 
   renderCards();
   renderMisc();
+  setupWechatTip();
   renderChangelog();
   renderDocs();
   renderGallery();

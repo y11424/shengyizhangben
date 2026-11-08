@@ -1,13 +1,20 @@
 /* ============================================================
    生意账本产品页 · 唯一需要修改的文件
    ------------------------------------------------------------
-   每次发新版，只改下面这几处：
-     1. products.xxx.version / versionCode / released
-     2. products.xxx.download.url / code / shareText
-     3. changelog 里加一条新版本
-     4. site.updatedAt（页面底部「资料更新日期」）
-   改完保存，重新发布（或重新上传整个 website 目录）即可，
-   网址不变，访客刷新就能看到新版。无需编译、无需数据库。
+   现在安装包直接放在 assets/apk/ 里，用户点按钮就在浏览器下载，不用网盘。
+   每次发新版：
+     1. 专业版先递增 versionCode 跑 bash build.sh（BUILD_DATE 别动），
+        取 dist 里那个「_release_」已签名包；通用版同理。
+     2. 用新 APK **覆盖同名文件** assets/apk/pro.apk（或 general.apk）。
+        文件名固定，所以网页链接不用改；只把 download.local.fileName
+        里的版本号顺手改成新的，用户下载到的文件名才会带新版本号。
+     3. 改 products.xxx.version / versionCode / released。
+     4. changelog 加一条、site.updatedAt 改成当天日期。
+     5. 迅雷网盘只作为备用：只有网盘里换了文件时才需要改
+        download.url / code / shareText。
+   改完重新上传/推送，网址不变，访客刷新即生效。无需编译、无需数据库。
+
+   download.mode = 'local' 用网页直下；临时切回 'pan' 则主按钮回迅雷。
    ============================================================ */
 
 window.SITE_DATA = {
@@ -46,6 +53,12 @@ window.SITE_DATA = {
       ],
       download: {
         label: '下载回收专业版安装包',
+        mode: 'local',
+        local: {
+          file: 'assets/apk/pro.apk',
+          fileName: '生意账本-回收专业版_3.7-Pro.apk',
+          size: '2.88 MB',
+        },
         url: 'https://pan.xunlei.com/s/VP5pTXgAVbRIjGlc5W-OxemoA1?pwd=47y3',
         code: '47y3',
         shareText:
@@ -78,6 +91,12 @@ window.SITE_DATA = {
       ],
       download: {
         label: '下载通用版安装包',
+        mode: 'local',
+        local: {
+          file: 'assets/apk/general.apk',
+          fileName: '生意账本-通用版_3.7.apk',
+          size: '3.40 MB',
+        },
         url: 'https://pan.xunlei.com/s/VP5pThKjpE_J8bXnTRxfw0AoA1?pwd=tmfy',
         code: 'tmfy',
         shareText:
