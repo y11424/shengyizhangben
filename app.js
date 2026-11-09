@@ -89,7 +89,7 @@
           '<div class="card-actions">' + mainBtn + '</div>' +
           (local ? '<p class="direct-note">安装包就在本站，点击直接下载，不用网盘、不用提取码。</p>' : '') +
           backup +
-          '<div class="doc-links">' + docs + '</div>' +
+          (docs ? '<div class="doc-links">' + docs + '</div>' : '') +
         '</article>';
     });
     $('#product-cards').innerHTML = html;
@@ -149,10 +149,10 @@
   var SHOTS = {
     pro: [
       ['pro_home.png', '回收品类：收购价、单位与实时库存'],
-      ['pro_create.png', '开单页：企业对接单开关与合规高亮卡片'],
-      ['pro_compliance.png', '合规信息登记表单'],
-      ['pro_detail.png', '订单详情：备注、合规信息、明细与总计'],
-      ['pro_export.png', '导出 CSV / PDF 单据 / 正规单据'],
+      ['pro_create.png', '开单页：企业对接单开关与业务登记高亮卡片'],
+      ['pro_compliance.png', '业务信息登记表单'],
+      ['pro_detail.png', '订单详情：备注、业务登记信息、明细与总计'],
+      ['pro_export.png', '导出 CSV / PDF 单据 / A4 业务单'],
       ['pro_ledger.png', '台账与报表：筛选、汇总与导出'],
       ['pro_stats.png', '统计：收入、支出与净结余'],
       ['pro_backup.png', '数据管理：备份、恢复与换机分享'],

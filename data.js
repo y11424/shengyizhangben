@@ -19,7 +19,7 @@
 
 window.SITE_DATA = {
   site: {
-    updatedAt: '2026-11-08',
+    updatedAt: '2026-11-09',
     notice: '', // 需要置顶公告时填一句话，留空则不显示
   },
 
@@ -36,28 +36,25 @@ window.SITE_DATA = {
       badge: '主推 · 回收站 / 中转站',
       tagline: '只做回收 / 收购这一件事。散户开单要快，企业整车过磅要全，两套流程互不打扰。',
       audience: '再生资源回收站、中转站、与企业工厂对接的经营者',
-      version: '3.7 Pro',
-      versionCode: 14,
-      released: '2026-11-07',
+      version: '3.8 Pro',
+      versionCode: 15,
+      released: '2026-11-09',
       features: [
         '散户单与企业对接单双轨开单',
         '来源 / 去向 / 转运方 / 车牌 / 磅单号 / 收据号登记',
-        'A4 正规回收单、再生资源出售单',
+        'A4 收购 / 出售业务单（对账用）',
         '作业台账与汇总表，CSV / PDF / XLSX 导出',
         '企业档案抬头，单据与台账自动带上公司名称',
         '本地备份、恢复、同 WiFi 换机迁移',
       ],
-      manuals: [
-        { label: '完整使用说明书（PDF）', file: 'assets/doc/manual-pro.pdf' },
-        { label: '快速上手 · 简略版（PDF）', file: 'assets/doc/manual-pro-quick.pdf' },
-      ],
+      manuals: [],
       download: {
         label: '下载回收专业版安装包',
         mode: 'local',
         local: {
           file: 'assets/apk/pro.apk',
-          fileName: '生意账本-回收专业版_3.7-Pro.apk',
-          size: '2.88 MB',
+          fileName: '生意账本-回收专业版_3.8-Pro.apk',
+          size: '2.90 MB',
         },
         url: 'https://pan.xunlei.com/s/VP5pTXgAVbRIjGlc5W-OxemoA1?pwd=47y3',
         code: '47y3',
@@ -86,9 +83,7 @@ window.SITE_DATA = {
         '物品与订单 CSV 导入导出，本地备份',
         '数据只存本机，不联网也能用',
       ],
-      manuals: [
-        { label: '通用版使用说明书（PDF）', file: 'assets/doc/manual-general.pdf' },
-      ],
+      manuals: [],
       download: {
         label: '下载通用版安装包',
         mode: 'local',
@@ -108,6 +103,17 @@ window.SITE_DATA = {
   },
 
   changelog: [
+    {
+      product: '回收专业版',
+      version: '3.8 Pro',
+      date: '2026-11-09',
+      items: [
+        '物品档案新增「品类」下拉（十类报废产品 / 其他报废产品 / 未标明），台账品类列优先按品类显示，没选的仍按物品名称',
+        '新增「交易地点」：设置里可开关（默认开），开单页收购单与销售单都能改；台账、订单、单据 PDF、备份都带上',
+        '单据 PDF 重排字号行距，15 条明细能落在一页；业务单与散户单全部改为黑白灰，更适合打印复印',
+        '物品 CSV 增加品类与历次调价记录；恢复旧备份不再清空本机已有的价格历史',
+      ],
+    },
     {
       product: '回收专业版',
       version: '3.7 Pro',
@@ -147,9 +153,6 @@ window.SITE_DATA = {
   ],
 
   docs: [
-    { label: '回收专业版 · 完整使用说明书', file: 'assets/doc/manual-pro.pdf' },
-    { label: '回收专业版 · 快速上手（简略版）', file: 'assets/doc/manual-pro-quick.pdf' },
-    { label: '通用版 · 使用说明书', file: 'assets/doc/manual-general.pdf' },
-    { label: '正规回收单 · A4 样例', file: 'assets/doc/receipt-sample.pdf' },
+    { label: '收购业务单 · A4 样例', file: 'assets/doc/receipt-sample.pdf' },
   ],
 };

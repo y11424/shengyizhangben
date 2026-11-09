@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="生意账本：安卓手机里的生意账。回收专业版与多行业通用版，开单、记账、统计、正规单据与作业台账，数据只存本机。">
+<meta name="description" content="生意账本：安卓手机里的生意账。回收专业版与多行业通用版，开单、记账、统计，导出 A4 业务单与作业明细表，数据只存本机。">
 <title>生意账本 · 安卓手机里的生意账</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -61,15 +61,15 @@
           <tr><td>支出单、收入单开单</td><td>✓</td><td>✓</td></tr>
           <tr><td>品类价格、库存与预警</td><td>✓</td><td>✓</td></tr>
           <tr><td>统计、本金、本地备份恢复</td><td>✓</td><td>✓</td></tr>
-          <tr><td>企业对接单与合规信息登记</td><td>✓ 来源、去向、车牌、磅单号等</td><td>—</td></tr>
-          <tr><td>正规回收单 / 出售单（A4）</td><td>✓</td><td>—</td></tr>
+          <tr><td>企业对接单与业务信息登记</td><td>✓ 来源、去向、车牌、磅单号等</td><td>—</td></tr>
+          <tr><td>A4 收购 / 出售业务单</td><td>✓</td><td>—</td></tr>
           <tr><td>作业台账与汇总表</td><td>✓ CSV / PDF / XLSX</td><td>—</td></tr>
           <tr><td>单据带上公司名称抬头</td><td>✓</td><td>—</td></tr>
           <tr><td>两版备份文件互通</td><td colspan="2" class="center">双向互通，换版本不用重录历史数据</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="hint">拿不准选哪个：只做回收、要和企业对账或报送台账，选专业版；还兼做零售、想自己选经营类型，选通用版。</p>
+    <p class="hint">拿不准选哪个：只做回收、要和企业对账、逐笔整理作业明细，选专业版；还兼做零售、想自己选经营类型，选通用版。</p>
   </section>
 
   <section id="screens" class="wrap section">
@@ -80,22 +80,23 @@
     </div>
     <div id="gallery-pro" class="gallery"></div>
     <div id="gallery-lite" class="gallery hidden"></div>
-    <p class="hint">点图片可放大查看。画面中的品类、金额、企业名称均为演示数据。</p>
+    <p class="hint">点图片可放大查看。画面中的品类、金额、企业名称均为演示数据；截图为 3.8 Pro 版界面。</p>
   </section>
 
   <section id="receipt" class="wrap section">
-    <h2>正规单据与作业台账</h2>
+    <h2>A4 业务单与作业明细表</h2>
     <div class="receipt-grid">
       <figure class="receipt-figure">
         <img src="assets/img/receipt.png" alt="再生资源回收单 A4 样例" loading="lazy">
-        <figcaption>再生资源回收单（A4 第 1 页示例）</figcaption>
+        <figcaption>收购业务单（A4 第 1 页示例）</figcaption>
       </figure>
       <div class="receipt-text">
-        <h3>企业对接单，一键出正规单据</h3>
-        <p>开单时打开「企业对接单」开关，登记来源、去向、转运方、车牌、磅单号、收据号与进出站时间，就能导出 A4 正规回收单 / 出售单，供对账、盖章、归档。</p>
-        <p>台账按「订单 × 品类明细」逐笔展开，可按日期、方向、关键字筛选，导出 CSV、PDF、XLSX 三种格式用于报送与二次统计。</p>
-        <p class="hint">公司名称填好之后，正规单据与台账自动带上抬头，PDF 页脚也统一显示公司名；不填则不印任何抬头。</p>
+        <h3>企业对接单，一键导出 A4 业务单</h3>
+        <p>开单时打开「企业对接单」开关，登记来源、去向、转运方、车牌、磅单号、收据号与进出站时间，就能导出 A4 收购 / 出售业务单，供双方对账、自行签字盖章后归档。</p>
+        <p>台账按「订单 × 品类明细」逐笔展开，可按日期、方向、关键字筛选，导出 CSV、PDF、XLSX 三种格式，便于按当地主管部门要求整理后报送，或自行二次统计。</p>
+        <p class="hint">公司名称填好之后，A4 业务单与台账自动带上抬头，PDF 页脚也统一显示公司名；不填则不印任何抬头。</p>
         <a class="btn ghost small" href="assets/doc/receipt-sample.pdf" target="_blank" rel="noopener">查看 A4 单据样例 PDF</a>
+        <p class="hint disclaimer">以上单据与表格均为按录入数据生成的内部业务记录，不是发票，也不是主管部门监制或指定格式的凭证；原始磅单、收据请自行留存备查，报送格式以当地要求为准。</p>
       </div>
     </div>
   </section>
@@ -134,6 +135,7 @@
         <p>使用演示 · 选经营类型、开单、看账（含讲解）</p>
       </div>
     </div>
+    <p class="hint">视频为 3.8 Pro 版录制，画面中的品类、金额均为演示数据。</p>
   </section>
 
   <section id="download" class="wrap section">
@@ -161,17 +163,18 @@
   </section>
 
   <section id="docs" class="wrap section">
-    <h2>说明书与资料</h2>
+    <h2>A4 单据样例</h2>
     <ul id="docs-list" class="doc-list"></ul>
   </section>
 
   <section id="faq" class="wrap section">
     <h2>常见问题</h2>
     <details><summary>点下载没反应，或微信里打不开？</summary><p>微信内置浏览器会拦截 APK 下载，请点右上角「…」→「在浏览器打开」后再点下载按钮。如果本站下载慢，可以改用产品卡里的「迅雷网盘」备用链接。</p></details>
-    <details><summary>苹果手机能用吗？</summary><p>目前只提供安卓版安装包。iPhone 可以用浏览器打开本页查看介绍、说明书和视频，但开单、记账需要在安卓设备上完成。</p></details>
+    <details><summary>苹果手机能用吗？</summary><p>目前只提供安卓版安装包。iPhone 可以用浏览器打开本页查看介绍和视频，但开单、记账需要在安卓设备上完成。</p></details>
     <details><summary>要联网、要注册账号吗？</summary><p>都不需要。数据只存在本机，不上传服务器；激活也是离线完成。</p></details>
     <details><summary>两个版本的授权码通用吗？</summary><p>不通用。请在索取授权码时说明用的是「回收专业版」还是「通用版」。</p></details>
     <details><summary>换手机、重装怎么办？</summary><p>先在旧机「备份全部数据」，把备份文件传到新机再「从备份恢复」，或用同 WiFi 分享迁移。授权码与设备码绑定，换机后需要重新取设备码联系开发者换发。</p></details>
+    <details><summary>导出的单据能当发票或合规凭证吗？</summary><p>本软件导出的单据 PDF 与台账表格，是经营者依据自行录入的数据生成的内部业务记录与统计文件，不是发票、不是税务机关监制票据，也不是任何主管部门指定格式或监制的凭证，不构成合规认定、税务凭证或标准认证。原始磅单、收据等凭证须由经营者自行留存备查；是否符合当地报送、税务及行业管理要求，请以主管部门规定为准。软件不提供开票、代报送或认证服务。</p></details>
     <details><summary>导出的单据和台账在哪里找？</summary><p>在手机「文件管理」里依次打开：内部存储 → Documents → 生意账本 → 单据 / 台账 / 备份。导出成功后也可以直接用弹出的分享面板发送。</p></details>
     <details><summary>软件变成只读、不能开单了？</summary><p>一般是试用或更新服务到期。已有数据仍可查看和导出，联系开发者续费后即可继续开单。</p></details>
   </section>
@@ -183,7 +186,7 @@
       <div class="contact-item"><span>邮箱</span><strong id="contact-email"></strong><button class="btn tiny" data-copy="email">复制</button></div>
       <div class="contact-item"><span>微信</span><strong id="contact-wechat"></strong><button class="btn tiny" data-copy="wechat">复制</button></div>
     </div>
-    <p class="copyright">本软件为独立开发，请尊重他人劳动成果、支持正版；未经授权请勿破解、复制或二次分发。</p>
+    <p class="copyright">本软件为独立开发，请尊重他人劳动成果、支持正版；未经授权请勿破解、复制或二次分发。导出文件的性质说明见上方常见问题。</p>
   </section>
 
 </main>
